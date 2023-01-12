@@ -1,0 +1,43 @@
+
+# Import necessary libraries
+from flask import Flask, render_template, request, jsonify
+
+# Initialize the Flask app
+app = Flask(__name__)
+
+# Define the route for the home page
+@app.route("/")
+def home():
+    return render_template("home.html")
+
+# Define the route for the memory test
+@app.route("/memory_test", methods=["GET", "POST"])
+def memory_test():
+    if request.method == "POST":
+        # Collect test data and store it in a database
+        pass
+    else:
+        # Render the memory test template
+        return render_template("memory_test.html")
+
+# Define the route for the attention test
+@app.route("/attention_test", methods=["GET", "POST"])
+def attention_test():
+    if request.method == "POST":
+        # Collect test data and store it in a database
+        pass
+    else:
+        # Render the attention test template
+        return render_template("attention_test.html")
+
+# Define the route for the executive function test
+@app.route("/exec_test", methods=["GET", "POST"])
+def exec_test():
+    if request.method == "POST":
+        # Collect test data and store it in a database
+        pass
+    else:
+        # Render the executive function test template
+        return render_template("exec_test.html")
+
+# Define the route for
